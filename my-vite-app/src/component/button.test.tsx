@@ -1,7 +1,7 @@
 import Button from "./button";
 import {fireEvent, render, screen, waitFor} from "@testing-library/react"
 
-
+//Testing for Singup including mock backedn call 
 
 test('Sinup render for succesfull Singup', () => { 
 render(<Button />);
