@@ -5,6 +5,14 @@ import { act } from "react"
 describe("rendering Blogs from backend", ()=>{
 afterAll(()=>jest.clearAllMocks());
 
+test("intial test", ()=>{
+    const btnEle= screen.getByRole('button', {
+        name: 'NextReq'
+    })
+
+    expect(btnEle).toBeTruthy();
+})
+
 test('handle error with any brakdown', async()=>{
     globalThis.fetch=jest.fn(()=>Promise.resolve({
         ok: false,
