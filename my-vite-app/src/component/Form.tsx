@@ -27,7 +27,7 @@ export const Form= ()=>{
     return <div>
        
             <label htmlFor="State">State</label>
-            <select name="State" value={state} onChange={handleSubmit} >
+            <select aria-label="State" name="State" value={state} onChange={handleSubmit} >
                 {
                 Object.keys(stateCityMap).map((State)=>{
                   return  <option value={State} key={State}>{State}</option>
@@ -37,8 +37,8 @@ export const Form= ()=>{
             </select>
 
             <label htmlFor="Cities"> Cities</label>
-            <select name="Cities" id="Cities" value={selectedCity} onChange={handleCity}>
-            <option value="" selected  disabled>Select a City</option>
+            <select aria-label="Cities" name="Cities" id="Cities" value={selectedCity} onChange={handleCity}>
+            <option value=""   disabled>Select a City</option>
                 {
                    
                     Cities.map((city)=>{

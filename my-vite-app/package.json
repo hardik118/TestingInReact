@@ -9,9 +9,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "jest",
-"coverage": "jest --coverage --watchAll --collectCoverageFrom=\"src/component/**/*.{ts,tsx}\" --collectCoverageFrom=\"!src/component/**/*.{types,stories,constants,test,spec}.{ts,tsx}\""
+    "coverage": "jest --coverage --watchAll --collectCoverageFrom=\"src/component/**/*.{ts,tsx}\" --collectCoverageFrom=\"!src/component/**/*.{types,stories,constants,test,spec}.{ts,tsx}\""
   },
-
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
