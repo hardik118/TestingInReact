@@ -42,7 +42,7 @@ export const Form= ()=>{
                 {
                    
                     Cities.map((city)=>{
-                        return <option value={city} key={city}>{city}</option>
+                        return <option  id="Cities" value={city} key={city}>{city}</option>
                     })
                 }
             </select>
