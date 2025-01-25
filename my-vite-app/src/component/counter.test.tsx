@@ -56,11 +56,10 @@ expect(window.alert).toHaveBeenCalledWith("plases pass the name in input file be
 
    test.only("testing for paste functionality",async ()=>{
     render(<Counter/>);
-    jest.useFakeTimers();
-const user= userEvent.setup();
+    const user= userEvent.setup();
 const inputElement= await screen.findByRole("textbox");
 
-Object.defineProperty(navigator, 'clipboard', {
+Object.defineProperty(global.navigator, 'clipboard', {
     value:{
         readText: jest.fn().mockResolvedValue("I love you f(love)")
     },
@@ -68,11 +67,11 @@ Object.defineProperty(navigator, 'clipboard', {
 })
 inputElement.focus();
 
-await user.type(inputElement, "{control>}v{/control}apple");
+await user.keyboard("{control>}v");
 
-await waitFor(()=>expect(inputElement).toHaveValue("apple"),{timeout:5000})
+await waitFor(()=>expect(inputElement).toHaveValue("I love you f(love)"))
 
 
-   }, 25000)
+   }, 15000)
 
 })

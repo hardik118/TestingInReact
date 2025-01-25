@@ -16,7 +16,5 @@ export default {
       statements: -10,
     },
   },
-  fakeTimers:{
-    enableGlobally: true
-  }
+ 
 };
