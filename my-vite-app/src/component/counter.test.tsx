@@ -2,9 +2,7 @@ import '@testing-library/jest-dom';
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { Counter } from './counter';
-import { useState } from 'react';
-import { keyboard } from '@testing-library/user-event/dist/cjs/keyboard/index.js';
-import { wait } from '@testing-library/user-event/dist/cjs/utils/index.js';
+
 
 describe("Understanding what are some user-evetns",  ()=>{
     
